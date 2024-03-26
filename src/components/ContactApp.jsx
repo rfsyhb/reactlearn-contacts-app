@@ -1,13 +1,13 @@
 import React from "react";
 import ContactList from "./ContactList";
 import ContactInput from "./ContactInput";
-import { getData } from "../utils/data";
+import { getContacts } from "../utils/data";
 
 class ContactApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      contacts: getData(),
+      contacts: getContacts(),
     };
 
     this.onDeleteHandler = this.onDeleteHandler.bind(this);
