@@ -1,6 +1,6 @@
 import React from "react";
 import ContactList from "../components/ContactList";
-import { deleteContact, deleteContact, getContacts } from "../utils/data";
+import { deleteContact, getContacts } from "../utils/data";
 
 class HomePage extends React.Component {
   constructor(props) {
