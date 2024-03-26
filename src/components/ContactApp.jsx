@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from 'react-router-dom';
 import Navigation from "./Navigation";
-import HomePage from "../pages/HomePage";
 import AddPage from "../pages/AddPage";
+import HomePageWrapper from "../pages/HomePage";
 
 function ContactApp() {
   return (
@@ -13,7 +13,7 @@ function ContactApp() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePageWrapper />} />
           <Route path="/add" element={<AddPage />} />
         </Routes>
       </main>
