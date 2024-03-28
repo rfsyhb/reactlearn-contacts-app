@@ -48,6 +48,17 @@ class ContactApp extends React.Component {
     });
   }
 
+  onLogoutHandler = () => {
+    this.setState(() => {
+      return {
+        authedUser: null
+      }
+    })
+
+    // reset accessToken
+    putAccessToken('')
+  }
+
   render() {
     if (this.state.initializing) {
       return null;
@@ -78,7 +89,7 @@ class ContactApp extends React.Component {
       <div className="contact-app">
         <header className="contact-app__header">
           <h1>Aplikasi Kontak</h1>
-          <Navigation />
+          <Navigation logout={this.onLogoutHandler} name={this.state.authedUser.name}/>
         </header>
         <main>
           <Routes>
