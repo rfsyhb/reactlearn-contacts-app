@@ -34,6 +34,16 @@ class ContactApp extends React.Component {
     this.setState(() => ({
       authedUser: data,
     }));
+  };
+
+  async componentDidMount() {
+    const { data } = await getUserLogged();
+
+    this.setState(() => {
+      return {
+        authedUser: data,
+      };
+    });
   }
 
   render() {
@@ -46,7 +56,10 @@ class ContactApp extends React.Component {
           </header>
           <main>
             <Routes>
-              <Route path="/*" element={<LoginPage loginSuccess={this.onLoginSuccess} />} />
+              <Route
+                path="/*"
+                element={<LoginPage loginSuccess={this.onLoginSuccess} />}
+              />
               <Route path="/register" element={<RegisterPage />} />
               {/* <Route path="*" element={<p>Error 404</p>} /> */}
             </Routes>
