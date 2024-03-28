@@ -1,12 +1,12 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 class ContactInput extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      tag: '',
+      name: "",
+      tag: "",
     };
 
     this.onNameChangeEventHandler = this.onNameChangeEventHandler.bind(this);
@@ -19,7 +19,7 @@ class ContactInput extends React.Component {
       return {
         name: event.target.value,
       };
-    })
+    });
   }
 
   onTagChangeEventHandler(event) {
@@ -27,7 +27,7 @@ class ContactInput extends React.Component {
       return {
         tag: event.target.value,
       };
-    })
+    });
   }
 
   onSubmitEventHandler(event) {
@@ -36,17 +36,27 @@ class ContactInput extends React.Component {
     // Reset form
     this.setState(() => {
       return {
-        name: '',
-        tag: '',
-      }
-    })
+        name: "",
+        tag: "",
+      };
+    });
   }
 
   render() {
     return (
       <form className="contact-input" onSubmit={this.onSubmitEventHandler}>
-        <input type="text" placeholder="Nama" value={this.state.name} onChange={this.onNameChangeEventHandler} />
-        <input type="text" placeholder="Tag" value={this.state.tag} onChange={this.onTagChangeEventHandler} />
+        <input
+          type="text"
+          placeholder="Nama"
+          value={this.state.name}
+          onChange={this.onNameChangeEventHandler}
+        />
+        <input
+          type="text"
+          placeholder="Tag"
+          value={this.state.tag}
+          onChange={this.onTagChangeEventHandler}
+        />
         <button type="submit">Tambah</button>
       </form>
     );
@@ -55,6 +65,6 @@ class ContactInput extends React.Component {
 
 ContactInput.propTypes = {
   addContact: PropTypes.func.isRequired,
-}
+};
 
 export default ContactInput;

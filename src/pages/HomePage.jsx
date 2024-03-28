@@ -80,7 +80,7 @@ class HomePage extends React.Component {
                 keyword={this.state.keyword}
                 keywordChange={this.onKeywordChangeHandler}
               />
-              <h2>{locale === 'id' ? 'Daftar kontak' : 'Contacts List'}</h2>
+              <h2>{locale === "id" ? "Daftar kontak" : "Contacts List"}</h2>
               <ContactList
                 contacts={contacts}
                 onDelete={this.onDeleteHandler}

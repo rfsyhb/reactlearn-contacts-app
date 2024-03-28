@@ -16,7 +16,7 @@ function LoginPage({ loginSuccess }) {
   return (
     <section className="login-oage">
       <h2>Silahkan masuk untuk melanjutkan ...</h2>
-        <LoginInput login={onLogin} />
+      <LoginInput login={onLogin} />
       <p>
         Belum punya akun? <Link to="/register">Daftar di sini.</Link>
       </p>

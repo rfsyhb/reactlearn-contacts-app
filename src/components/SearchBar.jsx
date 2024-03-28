@@ -11,7 +11,9 @@ function SearchBar({ keyword, keywordChange }) {
           <input
             className="search-bar"
             type="text"
-            placeholder={locale === 'id' ? 'Cari berdasarkan nama' : 'Search by name'}
+            placeholder={
+              locale === "id" ? "Cari berdasarkan nama" : "Search by name"
+            }
             value={keyword}
             // arrow function
             onChange={(event) => keywordChange(event.target.value)}

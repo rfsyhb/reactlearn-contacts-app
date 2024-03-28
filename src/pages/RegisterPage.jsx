@@ -9,7 +9,7 @@ function RegisterPage() {
   async function onRegisterHandler(user) {
     const { error } = await register(user);
     if (!error) {
-      navigate('/');
+      navigate("/");
     }
   }
 
