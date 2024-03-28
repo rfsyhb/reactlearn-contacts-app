@@ -10,6 +10,7 @@ Contact App adalah sebuah aplikasi sederhana yang memungkinkan pengguna untuk me
 - Menampilkan daftar kontak yang sudah ada.
 - Mengedit informasi kontak yang sudah ada.
 - Menghapus kontak dari daftar.
+- React Router untuk mengatur navigasi antar halaman.
 
 ## Tujuan
 
@@ -19,4 +20,4 @@ Tujuan dari studi kasus ini adalah untuk mempelajari konsep-konsep dasar dalam p
 - State dan props.
 - Penggunaan form untuk input data.
 - Manipulasi data menggunakan fungsi-fungsi dasar.
-- Aplikasi ini juga menggunakan React Router untuk mengatur navigasi antar halaman.
+- React Router 
