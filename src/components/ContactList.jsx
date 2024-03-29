@@ -1,4 +1,4 @@
-import React from "react";
+
 import ContactItem from "./ContactItem";
 import PropTypes from "prop-types";
 

@@ -5,6 +5,7 @@ import { deleteContact, getContacts } from "../utils/api";
 import SearchBar from "../components/SearchBar";
 import { useSearchParams } from "react-router-dom";
 import { LocaleConsumer } from "../contexts/LocaleContexts";
+import PropTypes from "prop-types";
 
 function HomePageWrapper() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -91,6 +92,11 @@ class HomePage extends React.Component {
       </LocaleConsumer>
     );
   }
+}
+
+HomePage.propTypes = {
+  defaultKeyword: PropTypes.string.isRequired,
+  keywordChange: PropTypes.func.isRequired,
 }
 
 export default HomePageWrapper;
