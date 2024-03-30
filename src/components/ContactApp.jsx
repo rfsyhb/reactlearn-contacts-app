@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Navigation from "./Navigation";
 import AddPage from "../pages/AddPage";
-import HomePageWrapper from "../pages/HomePage";
+import HomePage from "../pages/HomePage";
 import RegisterPage from "../pages/RegisterPage";
 import LoginPage from "../pages/LoginPage";
 import { getUserLogged, putAccessToken } from "../utils/api";
@@ -121,7 +121,7 @@ class ContactApp extends React.Component {
           </header>
           <main>
             <Routes>
-              <Route path="/" element={<HomePageWrapper />} />
+              <Route path="/" element={<HomePage />} />
               <Route path="/add" element={<AddPage />} />
             </Routes>
           </main>
